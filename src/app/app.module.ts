@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AuthModule } from './auth/auth.module';
+import { AppMaterialModule } from './app-material/app-material.module';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { AuthModule } from './auth/auth.module';
 
     AppRoutingModule,
     AuthModule,
+    AppMaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
