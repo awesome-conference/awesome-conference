@@ -3,6 +3,13 @@
     <span>
       Awesome Conference
     </span>
+
+    <ng-container *ngIf="(authState$ | async) as user; else anonymous">
+      <span class="username">{{ user.email }}</span>
+      <span (click)="signOut()">Log out</span>
+    </ng-container>
+
+    <ng-template #anonymous><a [routerLink]="['/login']">Login</a></ng-template>
   </mat-toolbar>
 </header>
 <main>

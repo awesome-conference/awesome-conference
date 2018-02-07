@@ -10,11 +10,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AuthModule } from './auth/auth.module';
 import { AppMaterialModule } from './app-material/app-material.module';
+import { HomeModule } from './home/home.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,6 +26,7 @@ import { AppMaterialModule } from './app-material/app-material.module';
     AppRoutingModule,
     AuthModule,
     AppMaterialModule,
+    HomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
