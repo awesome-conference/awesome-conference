@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent,
   },
+  {
+    path: 'conf',
+    loadChildren: 'app/conference/conference.module#ConferenceModule',
+  },
 ];
 
 @NgModule({
