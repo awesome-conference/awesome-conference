@@ -27,9 +27,15 @@
     "@ngtools/json-schema" "^1.1.0"
     rxjs "^5.5.6"
 
-"@angular/animations@^5.2.0":
+"@angular/animations@^5.2.3":
   version "5.2.3"
   resolved "https://registry.yarnpkg.com/@angular/animations/-/animations-5.2.3.tgz#e0eb8d55f807e799df128af9150c075c9ab82adf"
+  dependencies:
+    tslib "^1.7.1"
+
+"@angular/cdk@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-5.2.0.tgz#4368f6749e915cdcc75d325ae33fdb3f85a88108"
   dependencies:
     tslib "^1.7.1"
 
@@ -3714,6 +3720,10 @@ gtoken@^1.2.1:
     jws "^3.0.0"
     mime "^1.4.1"
     request "^2.72.0"
+
+hammerjs@^2.0.8:
+  version "2.0.8"
+  resolved "https://registry.yarnpkg.com/hammerjs/-/hammerjs-2.0.8.tgz#04ef77862cff2bb79d30f7692095930222bf60f1"
 
 handle-thing@^1.2.5:
   version "1.2.5"
