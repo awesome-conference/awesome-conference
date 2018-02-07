@@ -1,0 +1,23 @@
+.loginBoxContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.formFieldContainer {
+  display: flex;
+  align-items: center;
+
+  mat-icon {
+    margin-right: 10px;
+  }
+
+  mat-form-field {
+    width: 350px;
+  }
+}
+
+button {
+  width: 100%;
+}
