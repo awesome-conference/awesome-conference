@@ -1,8 +1,9 @@
+mat-card {
+  margin: auto;
+}
+
 .loginBoxContainer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  max-width: 350px;
 }
 
 .formFieldContainer {
@@ -14,7 +15,7 @@
   }
 
   mat-form-field {
-    width: 350px;
+    width: 300px;
   }
 }
 
