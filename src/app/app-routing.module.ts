@@ -4,11 +4,16 @@ import { LoginComponent } from './auth/login/login.component';
 
 const routes: Routes = [
   {
+    path: '',
+    pathMatch: 'full',
+    loadChildren: 'app/dashboard/dashboard.module#DashboardModule',
+  },
+  {
     path: 'login',
     component: LoginComponent,
   },
   {
-    path: 'conf',
+    path: 'conferences',
     loadChildren: 'app/conference/conference.module#ConferenceModule',
   },
 ];

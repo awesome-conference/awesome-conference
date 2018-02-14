@@ -1,0 +1,11 @@
+<div class="contentLoading">
+  <mat-progress-bar *ngIf="isConferenceLoading" mode="indeterminate"></mat-progress-bar>
+</div>
+<section *ngIf="conference$ | async as conference">
+  <h1>{{ conference.name }}</h1>
+  <div>
+    <p>
+      {{ conference.description }}
+    </p>
+  </div>
+</section>

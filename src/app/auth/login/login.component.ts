@@ -5,7 +5,7 @@ import * as firebase from 'firebase/app';
 
 
 @Component({
-  selector: 'app-login',
+  selector: 'awc-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })

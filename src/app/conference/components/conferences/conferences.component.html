@@ -1,0 +1,4 @@
+<div class="contentLoading">
+  <mat-progress-bar *ngIf="isConferencesLoading" mode="indeterminate"></mat-progress-bar>
+</div>
+<awc-conference-card  *ngFor="let conference of conferences$ | async" [conference]="conference"></awc-conference-card>
