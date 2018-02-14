@@ -1,23 +1,34 @@
-<header>
-  <mat-toolbar>
-    <span>
-      Awesome Conference
-    </span>
+<div class="wrapper">
+  <header class="mainHeader">
+    <mat-toolbar>
+      <span>
+        Awesome Conference
+      </span>
 
-    <ng-container *ngIf="(authState$ | async) as user; else anonymous">
-      <span class="username">{{ user.email }}</span>
-      <span (click)="signOut()">Log out</span>
-    </ng-container>
+      <div class="userBlock">
+        <ng-container *ngIf="(authState$ | async) as user; else anonymous">
+          <span class="username">{{ user.email }}</span>
+          <button mat-button (click)="signOut()" class="logout">
+            <a>logout<mat-icon>power_settings_new</mat-icon></a>
+          </button>
+        </ng-container>
 
-    <ng-template #anonymous><a [routerLink]="['/login']">Login</a></ng-template>
-  </mat-toolbar>
-</header>
-<main>
-  <router-outlet></router-outlet>
-</main>
+        <ng-template #anonymous>
+          <a [routerLink]="['/login']">
+            <button mat-raised-button>Login</button>
+          </a>
+        </ng-template>
+      </div>
+    </mat-toolbar>
+  </header>
 
-<footer>
-  <mat-toolbar>
-    <span class="authors">Awesome Conference brought to you by jbj and rr.</span>
-  </mat-toolbar>
-</footer>
+  <section class="content">
+    <router-outlet></router-outlet>
+  </section>
+
+  <footer class="mainFooter">
+    <mat-toolbar>
+      <span class="authors">Awesome Conference brought to you by jbj and rr.</span>
+    </mat-toolbar>
+  </footer>
+</div>

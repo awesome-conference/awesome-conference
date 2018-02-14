@@ -2,7 +2,7 @@
   <mat-card class="loginBoxContainer">
     <mat-card-title>Login</mat-card-title>
     <mat-card-content>
-      <button (click)="loginWithGoogle()" mat-raised-button>
+      <button (click)="login('google')" mat-raised-button>
         <img src="./assets/g-logo.png">
              Sign-In with Google
       </button>
@@ -10,16 +10,16 @@
       <form role="form"
             [formGroup]="form"
             novalidate
-            (ngSubmit)="loginWithCredentials()">
+            (ngSubmit)="login('credentials')">
 
         <div class="formFieldContainer">
           <mat-icon>account_box</mat-icon>
           <mat-form-field>
             <input matInput
-                   formControlName="username"
+                   formControlName="email"
                    required="required"
-                   type="text"
-                   placeholder="Username">
+                   type="email"
+                   placeholder="Email">
           </mat-form-field>
         </div>
 

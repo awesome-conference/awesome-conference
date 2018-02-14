@@ -11,6 +11,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AuthModule } from './auth/auth.module';
 import { AppMaterialModule } from './app-material/app-material.module';
 import { HomeModule } from './home/home.module';
+import { SharedModule } from './shared/shared.module';
 
 
 @NgModule({
@@ -27,6 +28,8 @@ import { HomeModule } from './home/home.module';
     AuthModule,
     AppMaterialModule,
     HomeModule,
+
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
