@@ -7,10 +7,15 @@
 
       <div class="userBlock">
         <ng-container *ngIf="(authState$ | async) as user; else anonymous">
-          <span class="username">{{ user.email }}</span>
-          <button mat-button (click)="signOut()" class="logout">
-            <a>logout<mat-icon>power_settings_new</mat-icon></a>
-          </button>
+          <div class="username">{{ user.email }}</div>
+          <div class="userPhotoContainer" [matMenuTriggerFor]="authMenu">
+            <img *ngIf="user.photoURL" class="userPhoto" [src]="user.photoURL" alt="userPhoto">
+            <div *ngIf="!user.photoURL" class="photoPlaceholder">{{ user.email[0].toUpperCase() }}</div>
+          </div>
+
+          <mat-menu #authMenu="matMenu">
+            <button mat-menu-item (click)="signOut()"><mat-icon>power_settings_new</mat-icon>logout</button>
+          </mat-menu>
         </ng-container>
 
         <ng-template #anonymous>
