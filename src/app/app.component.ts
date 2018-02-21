@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { User } from 'firebase/app';
-import 'rxjs/add/operator/do';
 import { AuthService } from './auth/auth.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public authState$: Observable<User>;
+  public authState$: Observable<User | null>;
 
   constructor(
     private authService: AuthService,

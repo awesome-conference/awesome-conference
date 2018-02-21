@@ -9,10 +9,43 @@
 }
 
 .mainHeader {
+  $photoSize: 52px;
+  $photoRadius: $photoSize / 2;
+
+  $noUserBgColor: darkred;
+  $noUserTextColor: white;
+
   grid-area: header;
 
   .userBlock {
+    max-height: 100%;
     margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .userPhotoContainer {
+    height: $photoSize;
+    width: $photoSize;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    cursor: pointer;
+
+    .userPhoto, .photoPlaceholder {
+      height: $photoSize;
+      width: $photoSize;
+      border-radius: $photoRadius;
+    }
+
+    .photoPlaceholder {
+      background-color: $noUserBgColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: $noUserTextColor;
+      font-size: 24px;
+    }
   }
 
   .username {
@@ -21,19 +54,6 @@
 
   button a {
     text-decoration: none;
-  }
-
-  .logout {
-    margin-left: auto;
-
-    a {
-      display: flex;
-      align-items: center;
-    }
-
-    mat-icon {
-      margin-left: 6px;
-    }
   }
 
   mat-toolbar {
